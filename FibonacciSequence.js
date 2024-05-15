@@ -1,6 +1,6 @@
 const fibonacci = (input) => {
 	let result = [0, 1];
-	for (i = result.length; i < input; i++) {
+	for (i = 2; i < input; i++) {
 		const lastIndex = result[result.length - 1];
 		console.log("lastIndex", lastIndex);
 		const beforeLastIndex = result[result.length - 2];
