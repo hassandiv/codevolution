@@ -1,7 +1,7 @@
-const input = 7;
+const input = 3;
 
 const fibonacci = (input) => {
-	let result = [0, 1];
+	let result = [0, 1, 1];
 	for (i = result.length; i < input; i++) {
 		const lastIndex = result[result.length - 1];
 		console.log("lastIndex", lastIndex);
