@@ -1,4 +1,4 @@
-const input = 3;
+const input = 7;
 
 const fibonacci = (input) => {
 	let result = [0, 1];
