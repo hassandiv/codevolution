@@ -1,5 +1,3 @@
-const input = 7;
-
 const fibonacci = (input) => {
 	let result = [0, 1];
 	for (i = result.length; i < input; i++) {
@@ -13,4 +11,6 @@ const fibonacci = (input) => {
 	}
 	return result;
 };
-console.log("fibonacci", fibonacci(input));
+console.log("fibonacci", fibonacci(2));
+console.log("fibonacci", fibonacci(3));
+console.log("fibonacci", fibonacci(7));
