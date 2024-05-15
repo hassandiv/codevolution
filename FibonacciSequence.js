@@ -1,7 +1,9 @@
 const fibonacci = (n) => {
 	let result = [0, 1];
-	// console.log("fibonacci", result[i - 1] + result[i - 2]);
+	//Big-O = O(1) constant time complexity because it run a single time
 	for (i = 2; i < n; i++) {
+		//Big-O = O(n) linear time complexity because our for loop excuted depends on the input sizes
+
 		//DESCRIPTION
 		//while i less than n
 		//for loop is a condition and a loop, which based on index and input.
@@ -33,6 +35,7 @@ const fibonacci = (n) => {
 
 		//Solution 3
 		result[i] = result[i - 1] + result[i - 2];
+		//Big-O = O(n) linear time complexity because it is excuted depends on the input sizes
 	}
 	return result;
 };
@@ -40,3 +43,8 @@ const fibonacci = (n) => {
 console.log("fibonacci", fibonacci(3)); //yes loop - true
 console.log("fibonacci", fibonacci(4)); //yes loop - true
 console.log("fibonacci", fibonacci(7)); //yes loop - true
+
+//Big-O is linear time complexity
+//Big-O = O(n) linear
+//our for loop excuted depends on the input sizes
+//also he mentioned result[i] = result[i - 1] + result[i - 2]; is linear time complexity because it is excuted depends on the input sizes
