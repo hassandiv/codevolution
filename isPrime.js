@@ -15,6 +15,8 @@ console.log("isPrime", isPrime(5)); //true
 console.log("isPrime", isPrime(4)); //false
 console.log("isPrime", isPrime(23)); //true
 
+//Big-O = O(n) linear time complexity
+
 //Example a 5*1 = 5, 1*5 = 5 this is prime number
 //Example a 4*1 = 4, 1*4 = 4, 2*2 = 4 this is not a prime number
 //no other number than 1 should give out the same result as the number "n"
@@ -26,16 +28,23 @@ console.log("isPrime", isPrime(23)); //true
 //if any probabilities of the 30 muliplied by all of the "i" has "remainders %" and is equal to === 0 then it will not be a prime number
 //example 4 * 7 = 28 close to 30, our remainder is 2s
 
-//example pulled from https://www.freecodecamp.org/news/javascript-modulo-operator-how-to-use-the-modulus-in-js/#:~:text=What%20is%20the%20Modulo%20Operator,the%20percent%20sign%20(%20%25%20).
-// const checkNumber = (n) => {
-// 	if (n % 2 === 0) {
-// 		console.log(n + " is even");
-// 	} else {
-// 		console.log(n + " is odd");
-// 	}
-// };
+const isPrimeOptimised = (n) => {
+	if (n < 2) {
+		return false;
+	}
+	for (i = 2; i <= Math.sqrt(n); i++) {
+		console.log("n % i", n % i, i);
+		if (n % i === 0) {
+			return false;
+		}
+	}
+	return true;
+};
+console.log("isPrimeOptimised", isPrimeOptimised(1)); //false
+console.log("isPrimeOptimised", isPrimeOptimised(5)); //true
+console.log("isPrimeOptimised", isPrimeOptimised(4)); //false
+console.log("isPrimeOptimised", isPrimeOptimised(23)); //true
 
-// console.log("checkNumber", checkNumber(8)); // "8 is even"
-// console.log("checkNumber", checkNumber(21)); // "21 is odd"
-// console.log("checkNumber", checkNumber(17)); // "17 is odd"
-// console.log("checkNumber", checkNumber(10)); // "10 is even"
+//Big-O = O(sqrt(n)) time complexity
+//if n = 100, it will check until n = 10
+//if n = 10000, it will check until n = 100
