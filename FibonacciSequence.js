@@ -6,11 +6,11 @@ const fibonacci = (n) => {
 
 		//DESCRIPTION
 		//while i less than n
-		//for loop is a condition and a loop, which based on index and input.
-		//if index less than input i < n,
-		//if index less than or equal to input i <= n,
-		//if index is greater than input i > n,
-		//if index is greater than or equal to n i >= n
+		//for loop is a condition and a loop, which based on i and input.
+		//if i less than input i < n,
+		//if i less than or equal to input i <= n,
+		//if i is greater than input i > n,
+		//if i is greater than or equal to n i >= n
 
 		//i++ read below info
 		//if i = 2 and n = 3, then we have one loop because i < n, 2 < 3. in this first loop i++ doesn't change/add 1 to the index, so it will remain as the i init value = 2
