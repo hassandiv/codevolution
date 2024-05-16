@@ -1,22 +1,39 @@
-const isPowerOfTwo = (n) => {
+//optimal solution
+const isPowerOfTwoBitWise = (n) => {
 	if (n < 1) {
 		return false;
 	}
 
-	while (n > 1) {
-		if (n % 2 !== 0) {
-			console.log("n", n % 2, n);
-			return false;
-		}
-		console.log("n", n % 2, n);
-		n = n / 2;
-	}
-
-	return true;
+	return (n & (n - 1)) === 0;
 };
-console.log("isPowerOfTwo", isPowerOfTwo(1)); //default true
-console.log("isPowerOfTwo", isPowerOfTwo(2)); //true
-console.log("isPowerOfTwo", isPowerOfTwo(28)); //false
+//Big-O = O(1) //time complexity constant O off 1
+//this line of code will run just one
+console.log("isPowerOfTwoBitWise", isPowerOfTwoBitWise(1)); //default true
+console.log("isPowerOfTwoBitWise", isPowerOfTwoBitWise(2)); //true
+console.log("isPowerOfTwoBitWise", isPowerOfTwoBitWise(28)); //false
+
+//non optimal solution
+// const isPowerOfTwo = (n) => {
+// 	if (n < 1) {
+// 		return false;
+// 	}
+
+// 	while (n > 1) {
+// 		if (n % 2 !== 0) {
+// 			console.log("n", n % 2, n);
+// 			return false;
+// 		}
+// 		console.log("n", n % 2, n);
+// 		n = n / 2;
+// 	}
+
+// 	return true;
+// };
+// console.log("isPowerOfTwo", isPowerOfTwo(1)); //default true
+// console.log("isPowerOfTwo", isPowerOfTwo(2)); //true
+// console.log("isPowerOfTwo", isPowerOfTwo(28)); //false
+
+//Big-O = O(logn) //time complexity logarthematic O off logn
 
 //modulus % it checks if there is a remainder. If remainder return 1 automatically if no remainder return 0
 //if number is odd then it will return false immediatley on the first loop, because n % 2 should return remainder for odd numbers + 0.5, then % automatically returns 1
