@@ -40,9 +40,12 @@ const fibonacci = (n) => {
 	return result;
 };
 // console.log("fibonacci", fibonacci(2)); //no loop - false
-console.log("fibonacci", fibonacci(3)); //yes loop - true
-console.log("fibonacci", fibonacci(4)); //yes loop - true
-console.log("fibonacci", fibonacci(7)); //yes loop - true
+console.log("fibonacci", fibonacci(0)); //0 yes loop - true
+console.log("fibonacci", fibonacci(1)); //0 + 1 = 1 yes loop - true
+console.log("fibonacci", fibonacci(2)); //0 + 1 = 1 yes loop - true
+console.log("fibonacci", fibonacci(3)); //1 + 1 = 2 yes loop - true
+console.log("fibonacci", fibonacci(4)); //1 + 2 = 3 yes loop - true
+console.log("fibonacci", fibonacci(6)); //3 + 5 = 8 yes loop - true
 
 //Big-O is linear time complexity
 //Big-O = O(n) linear
